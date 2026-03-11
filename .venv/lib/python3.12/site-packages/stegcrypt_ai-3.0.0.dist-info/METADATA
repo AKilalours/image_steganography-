@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: stegcrypt-ai
+Version: 3.0.0
+Summary: StegCrypt-AI: password-keyed covert LSB steganography + AES-256-GCM authenticated encryption + optional CNN steganalysis + optional LLM transforms.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pillow>=10.0
+Requires-Dist: cryptography>=42.0
+Provides-Extra: ml
+Requires-Dist: torch>=2.1; extra == "ml"
+Requires-Dist: torchvision>=0.16; extra == "ml"
+Requires-Dist: scikit-learn>=1.3; extra == "ml"
+Provides-Extra: llm
+Requires-Dist: ollama>=0.1.9; extra == "llm"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: hypothesis>=6.0; extra == "dev"

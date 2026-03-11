@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stegcrypt-ai"
+version = "3.0.0"
+description = "StegCrypt-AI: password-keyed covert LSB steganography + AES-256-GCM authenticated encryption + optional CNN steganalysis + optional LLM transforms."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pillow>=10.0",
+    "cryptography>=42.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "scikit-learn>=1.3",   # for ROC-AUC in eval_cnn
+]
+llm = [
+    "ollama>=0.1.9",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "hypothesis>=6.0",
+]
+
+[project.scripts]
+stegcrypt = "stegcrypt.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["stegcrypt"]
+omit   = ["stegcrypt/ml/*"]   # ML needs GPU; exclude from default coverage
+
+[tool.coverage.report]
+show_missing = true
