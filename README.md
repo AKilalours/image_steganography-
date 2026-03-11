@@ -1,7 +1,7 @@
 # StegoCloak
 
 <p align="center">
-  <img src="Akilan_photo.png" alt="StegoCloak Cover" width="200" style="border-radius: 50%"/>
+  <img src="cover image.png" alt="StegoCloak Cover" width="200" style="border-radius: 50%"/>
 </p>
 
 <p align="center">
