@@ -153,7 +153,7 @@ Runs your message through a local AI before encrypting. **Note: lossy.**
 | `summarize` | Condenses to 1–2 sentences |
 | `translate` | Translates to another language |
 
-> ⚠️ When using `translate`: encrypt TO the target language, decrypt back TO your language.
+> When using `translate`: encrypt TO the target language, decrypt back TO your language.
 > Example: encrypt → Korean, decrypt → English.
 
 ---
